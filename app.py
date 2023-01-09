@@ -15,7 +15,7 @@ api = Api(app)
 url='http://api.openweathermap.org/data/2.5/weather?q='+Location+'&APPID='+APP_ID
 
 
-class Profile(Resource):
+class GetWeather(Resource):
     #@cross_origin()
     def get(self):
         response= requests.get(url)
@@ -35,7 +35,7 @@ class Profile(Resource):
 
 
 
-api.add_resource(Profile, '/')
+api.add_resource(GetWeather, '/')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
