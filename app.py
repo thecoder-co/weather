@@ -27,7 +27,7 @@ class GetWeather(Resource):
         print(w[0]['description'])
         print('The maximum temperature in Kelvin is %s:' % (weatherData["main"]["temp"]))
 
-        return {'status_code': 200, 'body': response.text, 
+        return {'status_code': 200, 'body': weatherData, 
         'current_weather': f'Current weather in {weatherData["name"]}: is {w[0]["description"]}',
         'max_temp': 'The maximum temperature in Kelvin is %s:' % (weatherData["main"]["temp"]),
 
