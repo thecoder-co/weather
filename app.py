@@ -1,6 +1,6 @@
 from flask import *
 from flask_restful import *
-import json, requests, sys
+import requests, sys
 
 
 Location='London,uk'
