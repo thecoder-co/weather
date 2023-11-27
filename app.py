@@ -31,8 +31,7 @@ class GetWeather(Resource):
         # print('Current weather in %s:' % (weatherData["name"]))
         # print(w[0]['description'])
         # print('The maximum temperature in Kelvin is %s:' % (weatherData["main"]["temp"]))
-        data = {'status_code': 200, 'body': weatherData,
-        }
+        data = {'status_code': 200, 'body': weatherData,}
         for i in locations_data:
             w=i['weather']
             name = i['name']
